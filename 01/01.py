@@ -1,4 +1,4 @@
-with open('input', 'r') as f:
+with open('example', 'r') as f:
     cals = f.read().splitlines()
 
 total_cals = []
@@ -9,11 +9,10 @@ for cal in cals:
     else:
         total_cals.append(elf)
         elf = 0
-    
+total_cals.append(elf)
 #part1
 print(max(total_cals))
 
 #part2
 total_cals.sort(reverse=True)
 print(sum(total_cals[:3]))
-
