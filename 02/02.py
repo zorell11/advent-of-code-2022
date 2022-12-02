@@ -7,10 +7,14 @@ X = 1
 Y = 2
 Z = 3
 
+lose = 0
+draw = 3
+win = 6 
+
 scores = {
-    "A X" : 3 + X, "B Y" : 3 + Y, "C Z" : 3 + Z, 
-    "A Y" : 6 + 2, "B Z" : 6 + Z, "C X" : 6 + X, 
-    "A Z" : 0 + 3, "B X" : 0 + X, "C Y" : 0 + 2
+    "A X" : draw + X, "B Y" : draw + Y, "C Z" : draw + Z, 
+    "A Y" : win + Y, "B Z" : win + Z, "C X" : win + X, 
+    "A Z" : lose + Z, "B X" : lose + X, "C Y" : lose + Y
 }
 
 
@@ -28,9 +32,9 @@ print(task1)
 
 #task2
 new_scores = {
-    "A X" : 0 + Z, "B X" : 0 + X, "C X" : 0 + Y, 
-    "A Y" : 3 + X, "B Y" : 3 + Y, "C Y" : 3 + Z,
-    "A Z" : 6 + Y, "B Z" : 6 + Z, "C Z" : 6 + X
+    "A X" : lose + Z, "B X" : lose + X, "C X" : lose + Y, 
+    "A Y" : draw + X, "B Y" : draw + Y, "C Y" : draw + Z,
+    "A Z" : win + Y, "B Z" : win + Z, "C Z" : win + X
 }
 
 task2 = 0
