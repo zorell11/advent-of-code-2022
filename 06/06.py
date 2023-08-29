@@ -7,3 +7,5 @@ for x in [4,14]:
         if len(set(data[i:i+x])) == x:
             print(i+x)
             break
+    else:
+        print(f"No solution for {x}")
